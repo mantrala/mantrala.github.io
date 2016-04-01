@@ -1,0 +1,11 @@
+<ng-include src="'/partials/topping_form.html'"></ng-include>
+<table class="table table-striped table-hover">
+  <tr>
+    <th>Id</th>
+    <th>Name</th>
+  </tr>
+  <tr ng-repeat="topping in toppings | orderBy:'-id'" data-id="{{ topping.id  }}">
+    <td>{{ topping.id }}</td>
+    <td>{{ topping.name }}</td>
+  </tr>
+</table>
